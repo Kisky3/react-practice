@@ -1,0 +1,15 @@
+.todo-footer {
+    float: left;
+    font-size: 14px;
+    margin: 10px;
+}
+.footer-del-btn {
+    width: 180px;
+    height: 30px;
+    background-color: rgb(233, 79, 92);
+    border-radius: 5px;
+    color: white;
+    border: none;
+    font-size: 15px;
+    margin-left: 15px;
+}

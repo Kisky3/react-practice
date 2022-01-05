@@ -1,4 +1,5 @@
 import React , { Component } from 'react'
+import './index.css'
 
 export default class Footer extends Component {
     render() {
@@ -11,7 +12,7 @@ export default class Footer extends Component {
                     <span> 
                         <span>Finished Tasks 0</span> / All 2 Tasks
                     </span>
-                    <button> Delete Finished Task</button>
+                    <button className="footer-del-btn"> Delete Finished Task</button>
                 </div>
             </div>
         )

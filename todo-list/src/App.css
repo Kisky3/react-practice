@@ -57,3 +57,21 @@ hr {
     border: none;
     height: 1px;
 }
+
+.todo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: auto;
+    padding: 20px;
+    background: gainsboro;
+    border: solid 1px #baba;
+    border-radius: 10px;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
+    margin-right: 5px;
+}

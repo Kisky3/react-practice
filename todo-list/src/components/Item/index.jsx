@@ -1,15 +1,16 @@
 import React, {Component} from 'react'
+import './index.css'
 
 export default class Item extends Component {
     render() {
         return (
-            <div>
+            <div className="todo-item">
                 <li>
-                    <label htmlFor="">
+                    <label>
                         <input type="checkbox" />
                         <span>Itemxxxx</span>
                     </label>
-                    <button style={{display: 'none'}}>删除</button>
+                    <button className="todo-del-btn">删除</button>
                 </li>
             </div>
         )

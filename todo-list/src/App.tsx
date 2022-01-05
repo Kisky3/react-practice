@@ -7,9 +7,12 @@ import List from './components/List'
 function App() {
   return (
     <div className="App">
-      <Header />
-      <List />
-      <Footer />
+      <div className="todo-container">
+        <Header />
+        <List />
+        <Footer />
+      </div>
+
     </div>
   );
 }
