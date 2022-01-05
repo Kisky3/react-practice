@@ -12,6 +12,7 @@
     border: none;
     font-size: 15px;
     float: right;
+    cursor: pointer;
 }
 
 .todo-item > span {
