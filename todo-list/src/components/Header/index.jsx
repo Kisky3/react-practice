@@ -5,7 +5,7 @@ export default class Header extends Component {
         return (
             <div>
                 <header className="header">TODO LIST</header>
-                <input className="header-input" type="text" />
+                <input className="header-input" type="text" placeholder="Input your tasks and press enter key"/>
             </div>
         )
     }
