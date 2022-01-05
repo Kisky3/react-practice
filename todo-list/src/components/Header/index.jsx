@@ -8,7 +8,7 @@ export default class Header extends Component {
         // create a todo obj and then return to app.vue
         const todoObj = {id:Date.now(), name:target.value, done:false }
         this.props.addTodo(todoObj);
-        target.value = ""
+        target.value = "";
     }
     render() {
         return (

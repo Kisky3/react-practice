@@ -5,7 +5,7 @@
 
 .todo-del-btn {
     width: 50px;
-    height: 20px;
+    height: 30px;
     background-color: rgb(233, 79, 92);
     border-radius: 5px;
     color: white;
@@ -17,4 +17,8 @@
 
 .todo-item > span {
     margin-left: 10px;
+}
+
+.todo-item > li {
+    height: 30px;
 }
