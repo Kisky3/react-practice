@@ -5,6 +5,8 @@ import Footer from './components/Footer'
 import List from './components/List'
 
 export default class App extends Component {
+  //init state
+
   state = {
     todos:[
       {id: 1, name: 'Eat', done: false },
@@ -13,10 +15,11 @@ export default class App extends Component {
     ]
   }
   render() {
+    const {todos} = this.state
     return (
       <div className="App todo-container">
           <Header />
-          <List />
+          <List todos={todos}/>
           <Footer />
         </div>
     );
