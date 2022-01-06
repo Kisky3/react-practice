@@ -15,7 +15,7 @@ export default class App extends Component {
     ]
   }
 
-  // a method, connect with child component input value
+  // add Todo method
   addTodo = (todoObj: any)=> {
     // get init todos
     const {todos} = this.state
@@ -26,14 +26,34 @@ export default class App extends Component {
 
   }
 
+    // delete todo method
+    delTodo = (id: Date|Number)=> {
+      // get init todos
+      const {todos} = this.state
+      let newTodos = todos.filter(todo=> todo.id !== id)
+      window.confirm("Are you sure to delete this task?");
+      this.setState({todos: newTodos})
+    }
+
+    // handle check status
+    handleCheck = (id: any, done: boolean) => {
+      const {todos} = this.state
+      const newTodos = todos.map((todoObj) => {
+        if(todoObj.id === id) return {...todoObj, done};
+        else return todoObj
+      })
+      //set new todos
+      this.setState({todos: newTodos})
+    }
+
   render() {
     const {todos} = this.state
     return (
       <div className="App todo-container">
           <Header addTodo={this.addTodo}/>
-          <List todos={todos}/>
+          <List todos={todos} delTodo={this.delTodo} handleCheck={this.handleCheck}/>
           <Footer />
-        </div>
+      </div>
     );
   }
 }

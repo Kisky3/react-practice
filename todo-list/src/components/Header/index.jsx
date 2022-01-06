@@ -5,6 +5,10 @@ export default class Header extends Component {
         const {keyCode, target} = event
         // wait until user finish input
         if (keyCode !== 13) return
+        if (target.value === "") {
+            alert("please input your task")
+            return
+        }
         // create a todo obj and then return to app.vue
         const todoObj = {id:Date.now(), name:target.value, done:false }
         this.props.addTodo(todoObj);
