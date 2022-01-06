@@ -31,7 +31,7 @@ export default class App extends Component {
       // get init todos
       const {todos} = this.state
       let newTodos = todos.filter(todo=> todo.id !== id)
-      window.confirm("Are you sure to delete this task?");
+      if(window.confirm("Are you sure to delete this task?"))
       this.setState({todos: newTodos})
     }
 
