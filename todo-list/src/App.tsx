@@ -52,7 +52,7 @@ export default class App extends Component {
       <div className="App todo-container">
           <Header addTodo={this.addTodo}/>
           <List todos={todos} delTodo={this.delTodo} handleCheck={this.handleCheck}/>
-          <Footer />
+          <Footer todos={todos} />
       </div>
     );
   }
