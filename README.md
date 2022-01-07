@@ -11,3 +11,5 @@ npm run start or yarn start
 npm run build or yarn build
 ```
 # Preview
+https://kisky3.github.io/react-practice/
+
