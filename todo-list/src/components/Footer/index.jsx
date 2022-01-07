@@ -6,6 +6,10 @@ export default class Footer extends Component {
         const {checked} = event.target
         this.props.controlAllCheck(checked);
     }  
+
+    delFinishedTasks =  () => {
+        this.props.delFinishedTasks()
+    }
     render() {
         // Use reduce to achieve count number function
         // const finishedTaskNum = this.props.todos.reduce((pre, currentValue) =>
@@ -24,7 +28,7 @@ export default class Footer extends Component {
                     <span>
                         <span>Finished Tasks {countDone}</span> / All {taskLength} Tasks
                     </span>
-                    <button className="footer-del-btn"> Delete Finished Task</button>
+                    <button className="footer-del-btn" onClick={this.delFinishedTasks}> Delete Finished Task</button>
                 </div>
             </div>
         );

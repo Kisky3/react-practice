@@ -55,13 +55,22 @@ export default class App extends Component {
       this.setState({todos: newTodos})
     }
 
+    // delete finished task
+    delFinishedTasks = () => {
+      const {todos} = this.state
+      if (window.confirm("Do you want to delete all finished tasks?")) {
+        const newTodos = todos.filter((todoObj) =>!todoObj.done);
+        this.setState({todos: newTodos});
+      }
+    }
+
   render() {
     const {todos} = this.state
     return (
       <div className="App todo-container">
           <Header addTodo={this.addTodo}/>
           <List todos={todos} delTodo={this.delTodo} handleCheck={this.handleCheck}/>
-          <Footer todos={todos} controlAllCheck={this.controlAllCheck}/>
+          <Footer todos={todos} controlAllCheck={this.controlAllCheck} delFinishedTasks={this.delFinishedTasks}/>
       </div>
     );
   }
