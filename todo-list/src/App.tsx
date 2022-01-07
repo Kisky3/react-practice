@@ -46,13 +46,22 @@ export default class App extends Component {
       this.setState({todos: newTodos})
     }
 
+    controlAllCheck = (checked: boolean) => {
+      // if all checked , then create new todos with all tasks done
+      const {todos}  = this.state
+      const newTodos = todos.map((todoObj) => {
+        return {...todoObj, done: checked}
+      })
+      this.setState({todos: newTodos})
+    }
+
   render() {
     const {todos} = this.state
     return (
       <div className="App todo-container">
           <Header addTodo={this.addTodo}/>
           <List todos={todos} delTodo={this.delTodo} handleCheck={this.handleCheck}/>
-          <Footer todos={todos} />
+          <Footer todos={todos} controlAllCheck={this.controlAllCheck}/>
       </div>
     );
   }
