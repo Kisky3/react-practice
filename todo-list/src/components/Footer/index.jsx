@@ -11,8 +11,9 @@ export default class Footer extends Component {
         // const finishedTaskNum = this.props.todos.reduce((pre, currentValue) =>
         //     pre + (currentValue.done ? 1: 0),0
         // );
-        const countDone = this.props.todos.filter(todo => todo.done).length
-        const taskLength = this.props.todos.length;
+        const {todos} = this.props
+        const countDone = todos.filter(todo => todo.done).length
+        const taskLength = todos.length;
         const allChecked = countDone === taskLength && taskLength !== 0;
         return (
             <div>
