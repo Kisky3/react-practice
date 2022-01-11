@@ -17,6 +17,6 @@ npm run build or yarn build
 ```
 
 # Preview
-https://kisky3.github.io/react-practice/
+https://kisky3.github.io/react-todolist/
 
 <img width="808" alt="スクリーンショット 2022-01-07 21 29 09" src="https://user-images.githubusercontent.com/23165804/148544367-9462471a-befe-40a0-bcd5-494742b586fa.png">
